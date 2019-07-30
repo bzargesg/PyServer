@@ -11,10 +11,6 @@ pip install flask
 
 python 3
 
-## Running the tests
-
-None
-
 ## Built With
 
 * [Flask](https://www.fullstackpython.com/flask.html) - Python Framework
@@ -29,4 +25,3 @@ None
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
