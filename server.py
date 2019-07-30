@@ -34,9 +34,16 @@ class My_api(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument("id")
         args = parser.parse_args()
+        data["1"].append(args["id"])
         print('args: ', args)
         print('post route dostuff')
-        return '', 201
+        return data, 201
+
+    @app.route('/dostuff/<index>', methods=['DELETE'])
+    def do_stuff_delete(index):
+        print(f"delete index: {index}")
+        removedValue = data["1"].pop(int(index))
+        return f"{removedValue} is deleted.", 200
 
 
 api.add_resource(My_api, '/')
